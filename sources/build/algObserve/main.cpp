@@ -7,6 +7,6 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
     MainWindow w;
     w.show();
-    int omar = 5;
+    int omar = 6;
     return a.exec();
 }
