@@ -61,7 +61,7 @@ void MainWindow::on_pushButton_clicked()
     //read the number the user typed in
     QString number = ui->lineEdit->text();
     //clear the canvas
-    clearCanvas();
+     clearCanvas();
     //convert the number to int type and invoke
     addColumn(number.toInt());
     //redraw the canvas

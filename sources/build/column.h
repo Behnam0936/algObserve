@@ -26,6 +26,11 @@ class Column {
         void setVal(int v) {
             val = v;height=v;
         }
+        int getPos() { return pos; }
+        void setPos(int position) {
+            this->pos = position;
+        }
+
 };
 
 //a set of columns with values between 1 and 100
@@ -42,14 +47,19 @@ class Columns {
                 if (val < 1 || val > 100) {
                     throw std::invalid_argument("The value of the column must be between 1 and 100");
                 }
+                else{
+                    Column newCol;
+                    newCol.setVal(val);
+                    v.push_back(newCol);
+                    newCol.setPos((int)v.size());
+                    cerr << newCol.getPos() << endl;
+                }
             }
             catch (std::invalid_argument& e) {
                 cerr << e.what() << endl;
             }
 
-            Column newCol;
-            newCol.setVal(val);
-            v.push_back(newCol);
+
         }
 
         //returns the number of columns
