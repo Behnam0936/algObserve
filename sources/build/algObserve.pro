@@ -38,6 +38,7 @@ SOURCES += \
     mainwindow.cpp
 
 HEADERS += \
+    column.h \
     mainwindow.h
 
 FORMS += \
