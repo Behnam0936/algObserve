@@ -22,9 +22,11 @@ public:
     void drawColumns(); //draw all columns on the canvas (QGraphicsScene object)
     void addColumn(int newColumnVal); //add a new column
     void clearCanvas(); //clear the canvas (QGraphicsScene object)
+    void delColumns();
 
 private slots:
-    void on_pushButton_clicked();
+    void on_addToDatasetButton_clicked();
+    void on_clearDatasetButton_clicked();
 
 private:
     Ui::MainWindow *ui;

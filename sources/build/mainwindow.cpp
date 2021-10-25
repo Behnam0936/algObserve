@@ -24,6 +24,11 @@ void MainWindow::addColumn(int newColumnVal){ //add a new column
     this->columns.addColumn(newColumnVal);
 }
 
+//delete columns
+void MainWindow::delColumns(){ //delete columns
+    this->columns.delColumns();
+}
+
 //draw all columns on the canvas (QGraphicsScene object)
 void MainWindow::drawColumns(){
     //set the drawing tools we want to use
@@ -56,14 +61,25 @@ MainWindow::~MainWindow()
 
 //When the user clicks the "Add to dataset" button,
 //read the user input and invoke the appropriate function
-void MainWindow::on_pushButton_clicked()
+void MainWindow::on_addToDatasetButton_clicked()
 {
     //read the number the user typed in
     QString number = ui->lineEdit->text();
     //clear the canvas
-     clearCanvas();
+    clearCanvas();
     //convert the number to int type and invoke
     addColumn(number.toInt());
     //redraw the canvas
     drawColumns();
 }
+
+//When the user clicks the "Add to dataset" button,
+//delete all columns
+void MainWindow::on_clearDatasetButton_clicked()
+{
+    //clear the canvas
+    clearCanvas();
+    //delete the columns
+    delColumns();
+}
+
