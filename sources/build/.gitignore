@@ -4,4 +4,5 @@
 Makefile
 Makefile.debug
 Makefile.release
-math.pro.user
+algObserve.pro.user
+algObserve.pro.user.*
