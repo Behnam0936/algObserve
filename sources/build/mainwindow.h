@@ -5,6 +5,7 @@
 #include <QtCore>
 #include <QtGui>
 #include <QGraphicsScene>
+#include <QGraphicsSimpleTextItem>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -22,6 +23,17 @@ private:
     Ui::MainWindow *ui;
     QGraphicsScene *scene;
     QGraphicsEllipseItem *ellipse;
-    QGraphicsRectItem *rectangle;
+    QGraphicsRectItem *rectangle1;
+    QGraphicsRectItem *rectangle2;
+    QGraphicsRectItem *rectangle3;
+    QGraphicsRectItem *rectangle4;
+    QGraphicsRectItem *rectangle5;
+
+    QGraphicsSimpleTextItem *text1;
+    QGraphicsSimpleTextItem *text2;
+    QGraphicsSimpleTextItem *text3;
+    QGraphicsSimpleTextItem *text4;
+    QGraphicsSimpleTextItem *text5;
+
 };
 #endif // MAINWINDOW_H
