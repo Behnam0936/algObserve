@@ -1,0 +1,31 @@
+#This workflow will build a C++ project with Qt
+
+#name of the workflow
+name: CI
+
+#events which trigger a certain workflow
+# (every time someone pushes to the main branch,
+# or someone pulls from the main branch, the 'jobs' will get executed)
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+    
+ #all actions are listed here =>   https://github.com/actions
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: configure
+      run: ./configure
+    - name: make
+      run: make
+    - name: make check
+      run: make check
+    - name: make distcheck
+      run: make distcheck
