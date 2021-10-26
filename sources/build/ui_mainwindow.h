@@ -41,9 +41,10 @@ public:
     QLabel *label;
     QGraphicsView *graphicsView;
     QLineEdit *lineEdit;
-    QPushButton *pushButton;
+    QPushButton *addToDatasetButton;
     QComboBox *comboBox;
     QPushButton *pushButton_2;
+    QPushButton *clearDatasetButton;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -51,7 +52,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(800, 589);
+        MainWindow->resize(815, 624);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         checkBox = new QCheckBox(centralwidget);
@@ -102,10 +103,10 @@ public:
         lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
         lineEdit->setGeometry(QRect(222, 470, 111, 31));
         lineEdit->setDragEnabled(false);
-        pushButton = new QPushButton(centralwidget);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(340, 470, 121, 31));
-        pushButton->setFont(font);
+        addToDatasetButton = new QPushButton(centralwidget);
+        addToDatasetButton->setObjectName(QString::fromUtf8("addToDatasetButton"));
+        addToDatasetButton->setGeometry(QRect(340, 470, 121, 31));
+        addToDatasetButton->setFont(font);
         comboBox = new QComboBox(centralwidget);
         comboBox->addItem(QString());
         comboBox->addItem(QString());
@@ -121,10 +122,14 @@ public:
         pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
         pushButton_2->setGeometry(QRect(700, 470, 81, 31));
         pushButton_2->setFont(font);
+        clearDatasetButton = new QPushButton(centralwidget);
+        clearDatasetButton->setObjectName(QString::fromUtf8("clearDatasetButton"));
+        clearDatasetButton->setGeometry(QRect(340, 510, 121, 31));
+        clearDatasetButton->setFont(font);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 800, 26));
+        menubar->setGeometry(QRect(0, 0, 815, 26));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -144,7 +149,7 @@ public:
         commandLinkButton_2->setText(QCoreApplication::translate("MainWindow", "Import/Export", nullptr));
         commandLinkButton_3->setText(QCoreApplication::translate("MainWindow", "Tutorial", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "Animation speed", nullptr));
-        pushButton->setText(QCoreApplication::translate("MainWindow", "Add to dataset", nullptr));
+        addToDatasetButton->setText(QCoreApplication::translate("MainWindow", "Add to dataset", nullptr));
         comboBox->setItemText(0, QCoreApplication::translate("MainWindow", "Select algorithm", nullptr));
         comboBox->setItemText(1, QCoreApplication::translate("MainWindow", "Insertion sort", nullptr));
         comboBox->setItemText(2, QCoreApplication::translate("MainWindow", "Selection sort", nullptr));
@@ -154,6 +159,7 @@ public:
         comboBox->setItemText(6, QCoreApplication::translate("MainWindow", "Shell sort", nullptr));
 
         pushButton_2->setText(QCoreApplication::translate("MainWindow", "Go!", nullptr));
+        clearDatasetButton->setText(QCoreApplication::translate("MainWindow", "Clear dataset", nullptr));
     } // retranslateUi
 
 };

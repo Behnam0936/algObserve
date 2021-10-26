@@ -41,6 +41,11 @@ class Columns {
 
         Columns(){ v = { }; }
 
+        //delete all columns
+        void delColumns() {
+            v = {};
+        }
+
         //adds a Column to the vector of columns
         void addColumn(int val){
             try {
