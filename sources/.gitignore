@@ -1,1 +1,8 @@
-build-algObserve*
+/debug
+/release
+.qmake.stash
+Makefile
+Makefile.debug
+Makefile.Release
+algObserve.pro.user
+algObserve.pro.user.*

@@ -1,4 +1,3 @@
-
 Group members:
 Abdelmuhdi Yousef - VEUNXG
 Ashour Omar - E5DZST
@@ -9,4 +8,4 @@ HOW TO RUN THE TESTS
 ...
 
 HOW TO MAKE THE PROJECT
-...
+go to the build folder and launch buld.bat file

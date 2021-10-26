@@ -3,6 +3,6 @@
 .qmake.stash
 Makefile
 Makefile.debug
-Makefile.release
+Makefile.Release
 algObserve.pro.user
 algObserve.pro.user.*
