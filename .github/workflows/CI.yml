@@ -34,6 +34,7 @@ jobs:
         #this executes the unit tests
       - name: Run Tests
         shell: cmd
-        run: .\tests\test.bat
+        working-directory: algObserve/tests
+        run: make
 
  
