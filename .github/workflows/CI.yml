@@ -34,6 +34,7 @@ jobs:
         #this executes the unit tests
       - name: Run Tests
         shell: cmd
-        run: cd ..\..\tests;pwd;make
+        working-directory: tests
+        run: make
 
  
