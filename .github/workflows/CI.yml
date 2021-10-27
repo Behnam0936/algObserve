@@ -33,8 +33,7 @@ jobs:
 
         #this executes the unit tests
       - name: Run Tests
-        working-directory: ../../tests
         shell: cmd
-        run: test.bat
+        run: algObserve/tests/test.bat
 
  
