@@ -32,7 +32,9 @@ jobs:
         uses: jurplel/install-qt-action@v2
 
         #this executes the unit tests
-      - name: Run QMake
-        env:
-          CC: ${{ matrix.compiler }}
-        run: qmake tests/unit_test.cpp
+      - name: Run Tests
+        working-directory: ../../tests
+        shell: cmd
+        run: test.bat
+
+ 
