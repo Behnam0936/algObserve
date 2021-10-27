@@ -48,7 +48,7 @@ class Columns {
 
         //adds a Column to the vector of columns
         void addColumn(int val){
-            try {
+            //try {
                 if (val < 1 || val > 100) {
                     throw std::invalid_argument("The value of the column must be between 1 and 100");
                 }
@@ -59,10 +59,10 @@ class Columns {
                     newCol.setPos((int)v.size());
                     cerr << newCol.getPos() << endl;
                 }
-            }
-            catch (std::invalid_argument& e) {
-                cerr << e.what() << endl;
-            }
+            //}
+            //catch (std::invalid_argument& e) {
+            //    cerr << e.what() << endl;
+            //}
 
 
         }
