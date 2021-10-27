@@ -33,7 +33,7 @@ jobs:
 
         #this executes the unit tests
       - name: Run Tests
-        shell: cmd
+        shell: powershell
         working-directory: tests
         run: make
 
