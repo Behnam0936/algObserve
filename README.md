@@ -9,4 +9,4 @@ go to the tests folder and 'make' the Makefile
 
 HOW TO BUILD THE PROJECT:
 go to the build folder and 'make' the Makefile
-(the ouptut will be in the sources folder)
+(the output will be in the sources folder)
