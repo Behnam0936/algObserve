@@ -36,7 +36,6 @@ jobs:
         #this executes the unit tests
       - name: Run Tests
         shell: powershell
-        working-directory: ./tests
-        run: make
+        run: make -C ./tests
 
  
