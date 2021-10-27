@@ -28,12 +28,13 @@ jobs:
         uses: actions/checkout@v1
       
         #this installs qt framework
-      - name: Install Qt
-        uses: jurplel/install-qt-action@v2
+      #- name: Install Qt
+      #  uses: jurplel/install-qt-action@v2
 
         #this executes the unit tests
       - name: Run Tests
         shell: cmd
-        run: algObserve/tests/test.bat
+        working-directory: algObserve/tests
+        run: test.bat
 
  
