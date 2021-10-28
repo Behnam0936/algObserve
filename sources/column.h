@@ -12,17 +12,17 @@ class Column {
     public:
 
         Column() { val=0; pos=0; }
-       
+
         Column(int v) {
             val=v;pos=0;height=v;
         }
-       
+
         Column(int v,int p) {
             val=v;pos=p;height=v;
         }
-       
+
         int getVal() { return val; }
-       
+
         void setVal(int v) {
             val = v;height=v;
         }

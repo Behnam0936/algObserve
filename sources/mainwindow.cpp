@@ -82,4 +82,3 @@ void MainWindow::on_clearDatasetButton_clicked()
     //delete the columns
     delColumns();
 }
-
