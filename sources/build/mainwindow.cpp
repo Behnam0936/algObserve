@@ -1,6 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-
+#include "Sort.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -23,6 +23,10 @@ void MainWindow::clearCanvas(){
 void MainWindow::addColumn(int newColumnVal){ //add a new column
     this->columns.addColumn(newColumnVal);
 }
+void MainWindow::ChangeColor(){
+
+
+}
 
 //draw all columns on the canvas (QGraphicsScene object)
 void MainWindow::drawColumns(){
@@ -30,7 +34,6 @@ void MainWindow::drawColumns(){
     QBrush blueBrush(Qt::blue);
     QPen blackpen(Qt::black);
     blackpen.setWidth(2);
-
     //draw one rectangle and one text for each column on the canvas (QGraphicsScene object)
     for(int i=0;i < this->columns.numberOfColumns();i++) {
         //the max height of a column on the canvas is 1000, which occurs when it's value is 100
@@ -46,6 +49,7 @@ void MainWindow::drawColumns(){
         QGraphicsSimpleTextItem *newText = scene->addSimpleText( QString::number(this->columns.nthColumnVal(i)) );
         //parameters: offsetX,offsetY
         newText->setPos(5 + (20 * (i+1) + 10 * (i)) ,1000);
+
     }
 }
 
@@ -67,3 +71,35 @@ void MainWindow::on_pushButton_clicked()
     //redraw the canvas
     drawColumns();
 }
+
+void MainWindow::on_pushButton_2_clicked()
+{
+   QString algorithmType = ui->comboBox->currentText() ;
+ if ( algorithmType == "Insertion sort"){
+     qDebug() << 5;
+ }
+ else if(algorithmType == "Selection sort"){
+     Sort *sorting = new SelectionSort();
+     sorting->sort(this->columns.getColumns());
+
+
+ }
+ else if(algorithmType == "Bubble sort"){
+     Sort *sorting = new BubbleSort();
+     sorting->sort(this->columns.getColumns());
+
+ }
+ else if(algorithmType == "Quick sort"){
+      qDebug() << 8;
+ }
+ else if(algorithmType == "Shell sort"){
+      qDebug() << 9;
+ }
+ else if(algorithmType == "Merge sort"){
+      qDebug() << 10;
+ }
+ else{
+      cerr << "Please select an algorithm" << endl;
+ }
+}
+

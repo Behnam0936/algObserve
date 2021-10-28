@@ -34,10 +34,13 @@ CONFIG      += release console
 TEMPLATE    = app
 
 SOURCES += \
+    Columns.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
+    Columns.h \
+    Sort.h \
     column.h \
     mainwindow.h
 
