@@ -1,6 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-
+#include "importdialog.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -81,4 +81,12 @@ void MainWindow::on_clearDatasetButton_clicked()
     clearCanvas();
     //delete the columns
     delColumns();
+}
+
+void MainWindow::on_commandLinkButton_2_clicked()
+{
+    hide();
+    ImportDialog importDialog;
+    importDialog.setModal(true);
+    importDialog.exec();
 }

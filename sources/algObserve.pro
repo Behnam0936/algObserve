@@ -34,14 +34,17 @@ CONFIG      += release console
 TEMPLATE    = app
 
 SOURCES += \
+    importdialog.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
     column.h \
+    importdialog.h \
     mainwindow.h
 
 FORMS += \
+    importdialog.ui \
     mainwindow.ui
 
 #this is the name of the exe file

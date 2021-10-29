@@ -28,6 +28,8 @@ private slots:
     void on_addToDatasetButton_clicked();
     void on_clearDatasetButton_clicked();
 
+    void on_commandLinkButton_2_clicked();
+
 private:
     Ui::MainWindow *ui;
     QGraphicsScene *scene;
